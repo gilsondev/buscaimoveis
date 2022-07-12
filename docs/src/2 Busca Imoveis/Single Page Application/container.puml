@@ -1,0 +1,19 @@
+@startuml container_spa
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Component.puml
+
+LAYOUT_WITH_LEGEND()
+
+Container(api, "API Application", "Python/FastAPI", "Entrega os dados dos anúncios para o SPA.")
+
+Container_Boundary(spa, "Single Page Application") {
+    Component(routing, "Routing", "React router", "Controle roteamento no lado cliente")
+    Component(store, "Data Store", "Redux", "Objeto central que controla estado da aplicação")
+    Component(home_list, "Home List Page", "React Class", "Página da Listagem de Imóveis")
+}
+
+Rel(spa, api, "Solicita dados dos anúncios na", "HTTPS/JSON")
+
+Rel(home_list, store, "Utiliza")
+Rel(routing, store, "Utiliza")
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml context
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Context.puml
+
+LAYOUT_WITH_LEGEND()
+
+Person(user, "Cliente", "Um usuário do sistema que busca anúncios de imóveis")
+System(buscaimoveis, "Busca Imoveis", "Coleta e agrega anúncios de imóveis dos grandes portais do ramo")
+System_Ext(sites, "Portais de Imóveis", "Sites de anúncios de imóveis com os dados disponíveis para coleta")
+
+Rel(user, buscaimoveis, "Busca anúncios de imóveis em")
+Rel(buscaimoveis, sites, "Faz a coleta para agregar os dados dos")
+@enduml

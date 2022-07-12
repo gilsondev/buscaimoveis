@@ -1,4 +1,3 @@
-# Busca Imóveis
 
 Busca Imóveis é um projeto de código aberto criado para agregar e disponibilizar em um só lugar os anúncios de imóveis a venda, buscando dados a partir dos grandes portais brasileiros como a OLX, VivaReal e ZAP Imóveis por exemplo. 
 
