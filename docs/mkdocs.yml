@@ -1,0 +1,10 @@
+site_name: My Docs
+docs_dir: src
+repo_url: https://github.com/gilsondev/buscaimoveis
+repo_name: gilsondev/buscaimoveis
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
